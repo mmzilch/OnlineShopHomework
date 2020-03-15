@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:id="@+id/imageCamera"
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="@drawable/camera_style"
+            android:src="@drawable/camera"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageAdvertise1"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/brand1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageCamera" />
+
+        <LinearLayout
+            android:id="@+id/layoutLatestArrival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/imageAdvertise1">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="Latest Arrivals"
+                android:textSize="30sp"/>
+
+            <Button
+                android:id="@+id/btnViewAll"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="#FF9800"
+                android:text="view all" />
+
+        </LinearLayout>
+
+        <fragment
+            android:id="@+id/fragmentLatestArrival"
+            android:name="com.example.onlineshophomework.fragment.LatestArrivalFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/layoutLatestArrival"
+            app:layout_constraintTop_toBottomOf="@id/layoutLatestArrival" />
+
+        <ImageView
+            android:id="@+id/imageAdvertise2"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/brand1"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/fragmentLatestArrival" />
+
+        <TextView
+            android:id="@+id/tvChoosebyCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Choose by Country"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="@id/imageAdvertise2"
+            app:layout_constraintTop_toBottomOf="@id/imageAdvertise2" />
+
+        <fragment
+            android:id="@+id/fragmentChoosebyCountry"
+            android:name="com.example.onlineshophomework.fragment.ChooseByCountryFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/tvChoosebyCountry"
+            app:layout_constraintTop_toBottomOf="@id/tvChoosebyCountry" />
+
+        <ImageView
+            android:id="@+id/imageAdvertise3"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:src="@drawable/brand2"
+            app:layout_constraintLeft_toLeftOf="@id/fragmentChoosebyCountry"
+            app:layout_constraintTop_toBottomOf="@id/fragmentChoosebyCountry" />
+
+        <TextView
+            android:id="@+id/tvPopularProducts"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Popular Products"
+            android:textSize="30sp"
+            app:layout_constraintLeft_toLeftOf="@id/imageAdvertise3"
+            app:layout_constraintTop_toBottomOf="@id/imageAdvertise3" />
+
+        <fragment
+            android:id="@+id/fragmentPopularProducts"
+            android:name="com.example.onlineshophomework.fragment.PopularProductFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/tvPopularProducts"
+            app:layout_constraintTop_toBottomOf="@id/tvPopularProducts" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

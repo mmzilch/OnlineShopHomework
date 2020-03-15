@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+            <ImageView
+            android:id="@+id/imageLatestArrival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/purse"/>
+
+        <TextView
+            android:id="@+id/tvLatestArrivalName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Horn Pink Long Sleev T Shirt"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/tvLatestArrivalType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Apple"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <RatingBar
+                android:id="@+id/ratingBarLatestArrival"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1.5"
+                android:numStars="5"
+                android:stepSize="1"
+                android:progressTint="#FFEB3B"
+                android:theme="@style/Widget.AppCompat.RatingBar" />
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvLatestArrivalPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="99,999999KS"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:id="@+id/tvLatestArrivalOldPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/strike_text_style"
+                    android:text="211000"
+                    android:textColor="#000000"
+                    android:padding="2dp"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
